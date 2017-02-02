@@ -7,4 +7,5 @@ public interface QueriesInterface {
     public String getSearchedDiagnosis();
     public int getSearchedIntervalLeftPosition();
     public int getSearchedIntervalRightPosition();
+
 }
