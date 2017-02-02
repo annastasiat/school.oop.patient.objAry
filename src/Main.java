@@ -9,7 +9,7 @@ public class Main {
                 new Patient("Bob","Miller","Kyiv","headache",1523),
                 new Patient("Sarah","Buttertree","Kharciv","flu",7426),
                 new Patient("Lixer","Fixic","Anananarivu","flu",5966),
-                new Patient("Mersedentia","Caterfield","Kapetown","fever",2458)
+                new Patient("Mersedentia","Caterfield","Deli","fever",2458)
         };
 
         Queries query = new Queries();

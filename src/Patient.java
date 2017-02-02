@@ -14,6 +14,5 @@ public class Patient {
         this.diagnosis = diagnosis;
         this.id = id;
     }
-
 }
 
