@@ -1,7 +1,3 @@
-/**
- * Created by work on 01.02.2017.
- */
-
 
 public class Main {
     public static void main (String[] args) {
@@ -13,11 +9,8 @@ public class Main {
         };
 
         Queries query = new Queries();
-        String searchedDiagnosis = query.getSearchedDiagnosis();
-        query.showByDiagnosis(searchedDiagnosis, objAry);
-        int left_position = query.getSearchedIntervalLeftPosition();
-        int right_position = query.getSearchedIntervalRightPosition();
-        query.showByCardId(left_position, right_position, objAry);
+        query.showByDiagnosis(query.getSearchedDiagnosis(), objAry);
+        query.showByCardId(query.getSearchedIntervalLeftPosition(), query.getSearchedIntervalRightPosition(), objAry);
 
     }
    }

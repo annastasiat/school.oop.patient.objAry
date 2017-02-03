@@ -2,11 +2,11 @@
 import java.util.Scanner;
 
 public class Queries implements QueriesInterface {
-    private String diagnosis;
-    private int left_position, right_position, i, k=0;
+    private int  i, k=0;
 
     public void showByDiagnosis(String diagnosis, Patient objAry[]){
         System.out.println("Patients who have diagnosis "+diagnosis+":");
+        i=0;
         while(i<objAry.length){
             if (objAry[i].diagnosis.equals(diagnosis)){
                 System.out.println(objAry[i].first_name+"  "+objAry[i].surname);
@@ -24,6 +24,7 @@ public class Queries implements QueriesInterface {
 
     public void showByCardId(int left_position,int right_position, Patient objAry[]){
         System.out.println("Patients whose card id is between "+left_position+" and "+right_position+":");
+        i=0;
         while(i<objAry.length){
             if (objAry[i].id > left_position && objAry[i].id<right_position){
                 System.out.println(objAry[i].first_name+"  "+objAry[i].surname);
@@ -40,19 +41,16 @@ public class Queries implements QueriesInterface {
     public String getSearchedDiagnosis(){
         System.out.println("Enter searched diagnosis: ");
         Scanner in = new Scanner(System.in);
-        diagnosis = in.nextLine();
-        return(diagnosis);
+        return(in.nextLine());
     }
     public int getSearchedIntervalLeftPosition(){
         System.out.println("Enter left position of searched card id interval: ");
         Scanner in = new Scanner(System.in);
-        left_position = in.nextInt();
-        return(left_position);
+        return(in.nextInt());
     }
     public int getSearchedIntervalRightPosition(){
         System.out.println("Enter right position of searched card id interval: ");
         Scanner in = new Scanner(System.in);
-        right_position = in.nextInt();
-        return(right_position);
+        return(in.nextInt());
     }
 }
