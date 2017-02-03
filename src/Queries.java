@@ -1,29 +1,40 @@
-/**
- * Created by work on 02.02.2017.
- */
+
 import java.util.Scanner;
 
 public class Queries implements QueriesInterface {
-    public String diagnosis;
-    public int left_position, right_position;
+    private String diagnosis;
+    private int left_position, right_position, i, k=0;
 
-    public void getByDiagnosis(String diagnosis, Patient objAry[],int i){
+    public void showByDiagnosis(String diagnosis, Patient objAry[]){
         System.out.println("Patients who have diagnosis "+diagnosis+":");
         while(i<objAry.length){
             if (objAry[i].diagnosis.equals(diagnosis)){
                 System.out.println(objAry[i].first_name+"  "+objAry[i].surname);
+                k++;
             }
             i++;
         }
+        if (k==0) {
+            System.out.println("no such diagnosis");
+        } else {
+            k=0;
+        }
+
     }
 
-    public void getByCardId(int left_position,int right_position, Patient objAry[],int i){
+    public void showByCardId(int left_position,int right_position, Patient objAry[]){
         System.out.println("Patients whose card id is between "+left_position+" and "+right_position+":");
         while(i<objAry.length){
             if (objAry[i].id > left_position && objAry[i].id<right_position){
                 System.out.println(objAry[i].first_name+"  "+objAry[i].surname);
+                k++;
             }
             i++;
+        }
+        if (k==0) {
+            System.out.println("no such card id");
+        } else {
+            k=0;
         }
     }
     public String getSearchedDiagnosis(){

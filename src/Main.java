@@ -1,7 +1,7 @@
 /**
  * Created by work on 01.02.2017.
  */
-import java.util.Scanner;
+
 
 public class Main {
     public static void main (String[] args) {
@@ -14,10 +14,10 @@ public class Main {
 
         Queries query = new Queries();
         String searchedDiagnosis = query.getSearchedDiagnosis();
-        query.getByDiagnosis(searchedDiagnosis, objAry, 0);
+        query.showByDiagnosis(searchedDiagnosis, objAry);
         int left_position = query.getSearchedIntervalLeftPosition();
         int right_position = query.getSearchedIntervalRightPosition();
-        query.getByCardId(left_position, right_position, objAry, 0);
+        query.showByCardId(left_position, right_position, objAry);
 
     }
    }
